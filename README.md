@@ -39,7 +39,31 @@ parameter input -> number to be transformed
 
 http://localhost:8080/fizzbuzz/range?min=12&max=30
 
+parameters:
+- min -> minimum value (inclusive) - default: 0
+- max -> maximum value (inclusive) - default: 100
+
 ## Structure
 
-/ 
+```
+/app
+ |- server.js
+ |- fizzbuzz.js
+/test
+ |- server.js
+ |- fizzbuzz.js
+```
 
+## Repository
+
+https://github.com/joaopcmiranda/FizzBuzz-Challenge
+
+On the Git repository there is the trail of the development process:
+
+Development started by creating tests for the function that transforms the number into the FizzBuzz;
+
+Then, it was implemented;
+
+Next, text cases for the server providing the UI;
+
+Finally, implemented the Server and the UI.
