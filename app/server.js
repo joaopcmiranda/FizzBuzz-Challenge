@@ -1,20 +1,35 @@
 const app = require("express")()
 const fb = require("./fizzbuzz")
 
-app.get("fizzbuzz/single", ({query}, {send}) => {
-    send(`<p>${fb(query.input)}</p>`)
+app.get("/", (req, res) => {
+    res.send("Hello World!")
 })
 
-app.get("fizzbuzz/range", ({query}, {send}) => {
-    const range = Array.from({length: (query.max - query.min) + 1}, (x, i) => i)
+app.get("/fizzbuzz/single", (req, res) => {
+    res.send(`<p>${fb(req.query.input)}</p>`)
+})
+
+app.get("/fizzbuzz/range", (req, res) => {
+    const {min, max} = req.query
+
+    const range = Array.from(
+        {length: (max - min) + 1},
+        (x, i) => {
+            return i + Number(min)
+        }
+    )
+
+    console.log(range)
 
     let output = "<ul>"
 
     output += range.map((input) => {
         return `<li>${fb(input)}</li>`
-    }).join()
+    }).join("")
 
     output += "</ul>"
 
-    send(output)
+    res.send(output)
 })
+
+app.listen(8080)
