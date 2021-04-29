@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/joaopcmiranda/FizzBuzz-Challenge#readme",
   "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "request": "^2.88.2",
     "chai": "^4.3.4",
     "mocha": "^8.3.2"
   }
