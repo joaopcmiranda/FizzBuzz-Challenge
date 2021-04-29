@@ -1,0 +1,23 @@
+{
+  "name": "fizzbuzz-challenge",
+  "version": "1.0.0",
+  "description": "FizzBuzz Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaopcmiranda/FizzBuzz-Challenge.git"
+  },
+  "author": "joaopcmiranda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/joaopcmiranda/FizzBuzz-Challenge/issues"
+  },
+  "homepage": "https://github.com/joaopcmiranda/FizzBuzz-Challenge#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2"
+  }
+}
