@@ -31,14 +31,6 @@ suite("Fizz Buzz", () => {
         expect(fizzbuzz(133)).to.not.contain("Buzz")
     })
 
-    test("return should contain Fizz when multiple of 3", () => {
-        expect(fizzbuzz(0)).to.contain("Fizz")
-        expect(fizzbuzz(3)).to.contain("Fizz")
-        expect(fizzbuzz(6)).to.contain("Fizz")
-        expect(fizzbuzz(60)).to.contain("Fizz")
-        expect(fizzbuzz(123)).to.contain("Fizz")
-    })
-
     test("return should contain FizzBuzz only when multiple of 3 and 5", () => {
         expect(fizzbuzz(0)).to.equal("FizzBuzz")
         expect(fizzbuzz(3)).to.equal("Fizz")
