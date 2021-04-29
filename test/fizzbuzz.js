@@ -1,6 +1,5 @@
 const expect = require("chai").expect;
 const fizzbuzz = require("../app/fizzbuzz");
-const {suite} = require('mocha');
 
 suite("Fizz Buzz", () => {
     test("return should contain Fizz when multiple of 3", () => {
