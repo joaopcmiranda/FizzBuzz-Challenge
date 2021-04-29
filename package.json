@@ -2,8 +2,9 @@
   "name": "fizzbuzz-challenge",
   "version": "1.0.0",
   "description": "FizzBuzz Challenge",
-  "main": "index.js",
+  "main": "app/server.js",
   "scripts": {
+    "start": "node app/server.js",
     "test": "mocha --reporter spec --ui tdd"
   },
   "repository": {

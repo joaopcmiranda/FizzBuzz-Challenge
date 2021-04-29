@@ -16,7 +16,7 @@ suite("Server test", () => {
         const url = urlGeneratorSingle(15)
 
         test("returns status 200", (done) => {
-            request(url, (error, response, body) => {
+            request(url, (error, response) => {
                 expect(response.statusCode).to.equal(200);
                 done();
             });
@@ -39,7 +39,7 @@ suite("Server test", () => {
         const url = urlGeneratorRange(5, 15)
 
         test("returns status 200", (done) => {
-            request(url, (error, response, body) => {
+            request(url, (error, response) => {
                 expect(response.statusCode).to.equal(200);
                 done();
             });

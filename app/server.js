@@ -1,16 +1,20 @@
 const app = require("express")()
 const fb = require("./fizzbuzz")
 
-app.get("/", (req, res) => {
-    res.send("Hello World!")
-})
-
 app.get("/fizzbuzz/single", (req, res) => {
     res.send(`<p>${fb(req.query.input)}</p>`)
 })
 
 app.get("/fizzbuzz/range", (req, res) => {
-    const {min, max} = req.query
+    let {min, max} = req.query
+
+    if(isNaN(min)){
+        min = 0
+    }
+
+    if(isNaN(max)){
+        max = 100
+    }
 
     const range = Array.from(
         {length: (max - min) + 1},

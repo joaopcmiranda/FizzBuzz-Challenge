@@ -12,3 +12,34 @@ INSTRUCTIONS
    approach to writing the code
 4. Submit your code in the appropriate language of choice in a file (or zip if need be)
 
+# Development
+
+## Running
+
+### Run the server 
+
+```shell
+npm start
+```
+
+### Access the app
+
+#### Single number on the FizzBuzz program
+
+i.e. 
+- 3 -> Fizz 
+- 15 -> FizzBuzz
+- 2 -> 2
+
+http://localhost:8080/fizzbuzz/range?input=NUMBER
+
+parameter input -> number to be transformed
+
+#### Print all numbers in a range on the FizzBuzz program
+
+http://localhost:8080/fizzbuzz/range?min=12&max=30
+
+## Structure
+
+/ 
+
