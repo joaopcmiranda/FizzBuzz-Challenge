@@ -5,10 +5,12 @@ const request = require("request");
 
 suite("Server test", () => {
 
+    const baseURL = 'http://localhost:8080/fizzbuzz'
+
     suite("Single Value", () => {
 
         function urlGeneratorSingle(single) {
-            return `http://localhost:8080/fizzbuzz/single?input=${single}`
+            return `${baseURL}/single?input=${single}`
         }
 
         const url = urlGeneratorSingle(15)
@@ -31,7 +33,7 @@ suite("Server test", () => {
     suite("Range", () => {
 
         function urlGeneratorRange(min, max) {
-            return `http://localhost:8080/fizzbuzz/range?min=${min}&max=${max}`
+            return `${baseURL}/range?min=${min}&max=${max}`
         }
 
         const url = urlGeneratorRange(5, 15)
