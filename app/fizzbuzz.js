@@ -9,6 +9,10 @@ module.exports = function (input) {
         output += "Fizz"
     }
 
+    if (input % 5 === 0) {
+        output += "Buzz"
+    }
+
     if (output.length > 0) {
         return output
     } else {
